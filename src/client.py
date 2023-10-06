@@ -1,7 +1,7 @@
 from uagents import Agent, Context
 from uagents.setup import fund_agent_if_low
 from plyer import notification
-from src.messages.weather import WeatherResponse, WeatherRequest
+from messages.weather import WeatherResponse, WeatherRequest
 import os
 
 WEATHER_CLIENT_SEED = os.getenv(
@@ -18,12 +18,21 @@ fund_agent_if_low(weather_client.wallet.address())
 
 # Update this Object with your city name and temperature range
 weather_request = WeatherRequest(
-    city="New Delhi", min_temp=70, max_temp=80)
+    city="New Delhi", min_temp=7, max_temp=42)
 
 
 @weather_client.on_event("startup")
 async def startup(ctx: Context):
-    weather_agent_address = input("Enter the weather agent address:")
+    weather_agent_address = input("Enter the weather agent address: ")
+    city = input("Enter your city name (default is New Delhi): ")
+    if city:
+        weather_request.city = city.strip()
+    min_temp = input("Minimum temperature (default is 7): ")
+    if min_temp:
+        weather_request.min_temp = float(min_temp)
+    max_temp = input("Minmum temperature (default is 42): ")
+    if max_temp:
+        weather_request.max_temp = float(max_temp)
     await ctx.send(weather_agent_address, weather_request)
 
 
