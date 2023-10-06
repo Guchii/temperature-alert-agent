@@ -30,7 +30,7 @@ async def startup(ctx: Context):
     min_temp = input("Minimum temperature (default is 7): ")
     if min_temp:
         weather_request.min_temp = float(min_temp)
-    max_temp = input("Minmum temperature (default is 42): ")
+    max_temp = input("Maxiumum temperature (default is 42): ")
     if max_temp:
         weather_request.max_temp = float(max_temp)
     await ctx.send(weather_agent_address, weather_request)
