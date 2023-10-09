@@ -1,4 +1,4 @@
-# uAgent Temperature Alert
+# uAgent-TempAlert
 
 ## Step 1: Prerequisites
 
