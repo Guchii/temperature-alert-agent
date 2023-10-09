@@ -1,14 +1,11 @@
 [tool.poetry]
-name = "holiday-integrations"
+name = "uAgent-TempAlert"
 version = "0.1.0"
-description = "A starter template for creating holiday integration examples"
-authors = ["Fetch.AI Limited"]
+description = "uAgent-TempAlert: Your personal Temperature Alert Agent. Monitor weather conditions, set thresholds, and receive real-time alerts for temperature extremes."
+authors = ["Shubhom Srivastava","Shivom Srivastava","Vaibhav Patel","Shrey Khare"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
-google-search-results = "^2.4.2"
-langchain = "^0.0.149"
-openai = "^0.27.4"
 uagents = "*"
 bs4 = "^0.0.1"
 clipboard = "^0.0.4"
