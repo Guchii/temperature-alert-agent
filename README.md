@@ -22,7 +22,7 @@ cd uAgent-TempAlert
 
 ```bash
 cd src
-poetry intall
+poetry install
 ```
 
 ### Step 4: Run the main script
